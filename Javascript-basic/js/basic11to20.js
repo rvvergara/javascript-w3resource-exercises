@@ -66,3 +66,56 @@ else{
 	diff = Math.abs(2*(parseInt(input)-13));
 }
 console.log(diff);
+
+//16. Write a JavaScript program to compute the sum of the two given integers. 
+//If the two values are same, then returns triple their sum. 
+
+var x = Number(prompt("first integer: "));
+var y = Number(prompt("second integer: "));
+var sum;
+if(x!=y){
+	sum = x+y;
+}
+else{
+	sum = 3*(x+y);
+}
+
+//17. Write a JavaScript program to compute the absolute difference between a specified number and 19. 
+//Returns triple their absolute difference if the specified number is greater than 19.
+
+var x = Math.round(Number(prompt("enter a number")));
+var diff;
+if(x<=19){
+	diff = 19 - x;
+}
+else{
+	diff = Math.abs(3*(19-x));
+}
+console.log(diff);
+
+//18. Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50. 
+var x = Number(prompt("enter first integer"));
+var y = Number(prompt("enter second integer"));
+var res = false;
+if((x == 50 || y == 50) || x+y==50){
+	res = true;
+}
+console.log(res);
+
+//19. Write a JavaScript program to check a given integer is within 20 of 100 or 400. 
+
+var x = Number(prompt("enter integer"));
+var res=false;
+if(Math.abs(100-x)<=20 || Math.abs(400-x)<=20){
+	res = true;
+}
+console.log(res);
+
+//20. Write a JavaScript program to check from two given integers, if one is positive and one is negative.
+var x = Number(prompt("enter first integer"));
+var y = Number(prompt("enter second integer"));
+var res = false;
+if((x<0 || y<0)&&(x>0 || y>0)){
+	res = true;
+}
+console.log(res);
