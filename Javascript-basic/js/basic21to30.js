@@ -121,5 +121,3 @@ if(str.search(re)==4){
 else{
 	console.log(str);
 }
-=======
->>>>>>> fedfeb9b3a3fde45614c94a8fbaf7dfcca530721
