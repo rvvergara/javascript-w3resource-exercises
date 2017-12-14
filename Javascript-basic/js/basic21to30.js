@@ -58,3 +58,65 @@ else{
 	console.log("The integer is not divisible by either 3 or 7");
 }
 
+//26. Write a JavaScript program to create a new string from a given string taking the last 
+//3 characters and added at both the front and back. The string length must be 3 or more.
+
+var str = prompt("Please enter a string at least 3 characters long");
+while(str.length<3){
+	alert("Please enter a string at least 3 characters long");
+	str = prompt("Please enter a string at least 3 characters long");
+}
+var last = str.substr(str.length-3);
+str = last + str + last;
+console.log(str);
+
+//27. Write a JavaScript program to check if a string starts with 'Java' and false otherwise.
+var str = prompt("Please enter a string");
+var re = /^(Java)/g;
+
+if(str.search(re) == -1){
+	console.log("The string does not start with 'Java'");
+}
+else{
+	console.log("The string starts with 'Java'");
+}
+
+//28. Write a JavaScript program to check if two given integer values are in the range 50..99 
+//(inclusive). Return true if either of them are in the said range.
+
+var x = parseInt(prompt("Please enter an integer"));
+var y = parseInt(prompt("Please enter another integer"));
+
+if(x>=50 && x<=99 || y>=50 && y<=99){
+	console.log("One of them is within our range");
+}
+else{
+	console.log("Both are out of range");
+}
+
+//29. Write a JavaScript program to check if three given integer values are in the range 50..99 (inclusive). 
+//Return true if one or more of them are in the said range.
+
+var x = parseInt(prompt("Please enter an integer"));
+var y = parseInt(prompt("Please enter another integer"));
+var z = parseInt(prompt("Please enter a third integer"));
+
+if(x>=50 && x<=99 || y>=50 && y<=99 || z>=50 && z<=99){
+	console.log("One of them is within our range");
+}
+else{
+	console.log("All three are out of range");
+}
+
+//30. Write a JavaScript program to check if a string "Script" presents at 5th (index 4) position in a given string, 
+//if "Script" presents in the string return the string without "Script" otherwise return the original one.
+
+var re = /(Script)/g;
+var str = prompt("Please enter a string");
+if(str.search(re)==4){
+	str = str.slice(0,4);	
+	console.log(str);
+}
+else{
+	console.log(str);
+}
