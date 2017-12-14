@@ -58,6 +58,7 @@ else{
 	console.log("The integer is not divisible by either 3 or 7");
 }
 
+<<<<<<< HEAD
 //26. Write a JavaScript program to create a new string from a given string taking the last 
 //3 characters and added at both the front and back. The string length must be 3 or more.
 
@@ -120,3 +121,5 @@ if(str.search(re)==4){
 else{
 	console.log(str);
 }
+=======
+>>>>>>> fedfeb9b3a3fde45614c94a8fbaf7dfcca530721
