@@ -89,3 +89,64 @@ for(i=0, count=0;i<str.length;i++){
 if(count>=2 && count<=4){
 	console.log("'"+str+"' contains "+count+" instances of'"+spec+"'");
 }
+
+//36. Write a JavaScript program to check if the last digit of the three given positive integers is same. 
+
+var x = prompt("Please enter first integer");
+var y = prompt("Please enter second integer");
+var z = prompt("Please enter third integer");
+
+if((Number(x[x.length-1])== Number(y[y.length-1]) && Number(y[y.length-1]) == Number(z[z.length-1]))){
+	console.log("the three integers have the same last digit");
+}
+
+//37. Write a JavaScript program to create new string with first 3 characters are in lower case. 
+//If the string length is less than 3 convert all the characters in upper case.
+
+var str = prompt("Please enter string");
+
+if(str.length <= 3){
+	str = str.toUpperCase();
+}
+else{
+	str = str.substr(0,3).toLowerCase()+str.substr(3).toUpperCase();
+}
+console.log(str);
+
+//38. Write a JavaScript program to check the total marks of a student in various examinations. 
+//The student will get A+ grade if the total marks are in the range 89..100 inclusive, if the examination is "Final-exam." 
+//the student will get A+ grade and total marks must be greater than or equal to 90. 
+//Return true if the student get A+ grade or false otherwise. 
+
+var is_finals = prompt("Is it the final exam?Y/N");
+var exam_grade = Number(prompt("What is the exam score?"));
+
+if(is_finals == "Y"){
+	if(exam_grade >= 90){
+		console.log("You get an A+");
+	}
+	else{
+		console.log("Sorry no A+");
+	}
+}
+else{
+	if(exam_grade>=89 &&  exam_grade<=100){
+		console.log("You get an A+"); 
+	}
+	else{
+		console.log("Sorry no A+");
+	}
+}
+
+//40. Write a JavaScript program to check from two given integers if either one 
+//is 8 or their sum or difference is 8. 
+
+var x = Number(prompt("Please enter first integer"));
+var y = Number(prompt("Please enter second integer"));
+
+if(x==8 || y==8 || x+y == 8 || Math.abs(x-y)==8){
+	console.log("There is an 8");
+}
+else{
+	console.log("No 8");
+}
