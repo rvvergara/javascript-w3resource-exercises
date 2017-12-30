@@ -70,3 +70,48 @@ function isFifteen(x,y){
 	return x == 15 || y == 15 || x+y == 15 || Math.abs(x-y) == 15;
 }
 
+//46. Write a JavaScript program to check two given non-negative integers and 
+//if one of the number (not both) is multiple of 7 or 11.
+
+function sevenEleven(x,y){
+	return (x%7 == 0 && y%7 != 0)|| (y%7 == 0 && x%7 != 0) || (x%11 == 0 && y%11 != 0)|| (y%11 == 0 && x%11 != 0);
+}
+
+//47. Write a JavaScript program to check if a number in the range 40..10000 
+//inclusive presents in two number (in same range). 
+//For example 40 presents in 400 and 4000
+
+function inRange(x){
+	return x>= 40 && x<=4000;
+}
+
+//48. Write a JavaScript program to reverse a given string. 
+
+function reverseStr(str){
+	var arr = [];
+	for(var i=0;i<str.length;i++){
+		arr.unshift(str[i]);
+	}
+	return arr.join("");
+}
+
+//49. Write a JavaScript program to replace every character in a given string with the character 
+//following it in the alphabet.
+
+function replaceCharWithNxt(str){
+	var str2="";
+	for(var i=0;i<str.length;i++){
+		str2+=String.fromCharCode(str.charCodeAt(i)+1);
+	}
+	return str2;
+}
+
+//50. Write a JavaScript program to capitalize the first letter of each word of a given string.
+
+function capitalizeStr(str){
+	var str2=str[0].toUpperCase();
+	for(var i=1;i<str.length;i++){
+		str2+=str[i];
+	}
+	return str2;
+}
