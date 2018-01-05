@@ -61,3 +61,60 @@ function equalSandP(str){
 	return countP == countS;
 }
 
+//56. Write a JavaScript program to divide two positive numbers 
+//and return a string with properly formatted commas.
+
+function divideAndStringed(x,y){
+	var result = Math.round(x/y), strRes = String(result),arrLength=0,arr=[];
+	arrLength = strRes.length;
+	for(var i=0;i<arrLength;i++){
+		arr.push(strRes[i]);
+	}
+	return arr;
+}
+
+//57. Write a JavaScript program to create a new string of specified 
+//copies (positive number) of a given string.
+
+function copyStr(str,copies){
+	var str2="";
+	if(copies<=0){
+		return false;
+	}
+	for(var i=0;i<copies;i++){
+		str2+=str;
+	}
+	return str2;
+}
+
+//58. Write a JavaScript program to create a new string of 4 copies of the last 3 characters of a given original string.
+// The length of the given string must be 3 and above.
+
+function fourOfLastThree(str){
+	if(str.length<3){
+		return "Please enter a string which is at least 3 chars long";
+	}
+	var str2 = str.substr(str.length-3);
+	for(var i=0,str3="";i<4;i++){
+		str3+=str2;
+	}
+	return str3;
+}
+
+//59. Write a JavaScript program to extract the first half of a string of even length. 
+
+function halfOfString(str){
+	if(str.length%2 != 0){
+		return "Please enter a string of even length";
+	}
+	return str.substr(0,str.length/2);
+}
+
+//60. Write a JavaScript program to create a new string without the first and last character of a given string.
+
+function NoFirstAndLast(str){
+	var arr = str.split("");
+	arr.pop();
+	arr.shift();
+	return arr.join("");
+}
