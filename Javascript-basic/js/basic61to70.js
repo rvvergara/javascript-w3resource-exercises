@@ -51,3 +51,59 @@ function endsWithScript(str){
 	return str.search("Script") ==str.length-6 || str.search("script") ==str.length-6;
 }
 
+//66. Write a JavaScript program to display the city name if the string begins with "Los" or "New" otherwise return blank.
+
+function displayLosOrNew(city){
+	if(city.search("Los")==0 || city.search("New")==0)return city;
+}
+
+//67. Write a JavaScript program to create a new string from a given string, removing the first and last characters of the string if the 
+//first or last character are 'P'. Return the original string if the condition is not satisfied.
+
+function removeP(str){
+	if(str[0]=="P" || str[str.length-1]=="P"){
+		var arr = str.split("");
+		arr.pop();
+		arr.shift();
+		str = arr.join("");
+	}
+	return str;
+}
+
+//68. Write a JavaScript program to create a new string using the first and last n characters from a given sting. 
+//The string length must be greater or equal to n.
+
+function firstAndLastN(str,n){
+	var str2 = str.substr(0,n)+str.substr(str.length-n);
+	return str2;
+}
+
+//69. Write a JavaScript program to compute the sum of three elements of a given array of integers of length 3.
+function sumArray1(arr){
+	var sum = 0;
+	for(var i=0;i<arr.length;i++){
+		sum+=arr[i];
+	}
+	return sum;
+}
+
+//or
+
+function sumArray2(arr){
+	function plus(a,b){
+		return a+b;
+	}
+	return arr.reduce(plus);
+}
+
+//70. Write a JavaScript program to rotate the elements left of a given array of integers of length 3
+
+function rotateArr(arr){
+	var arr2 = [];
+	for(let i=1;i<arr.length;i++){
+		arr2.push(arr[i]);
+	}
+	arr2.push(arr[0]);
+	return arr2;
+}
+
